@@ -42,10 +42,10 @@ def export():
                 keys = (("ฟันน้ำนมผุ d (ซี่)", "ฟันน้ำนมถอน m (ซี่)", "ฟันน้ำนมอุด f (ซี่)") if age == "3" else ("ฟันแท้ผุ D (ซี่)", "ฟันแท้ถอน M (ซี่)", "ฟันแท้อุด F (ซี่)"))
                 values = [number(row.get(key)) for key in keys]
                 limit = 20 if age == "3" else 32
-                decay = values[0]
-                if decay is not None and decay >= 0 and decay.is_integer() and decay <= limit:
+                decay, missing = values[0], values[1]
+                if all(v is not None and v >= 0 and v.is_integer() for v in (decay, missing)) and decay + missing <= limit:
                     bucket["cavity_den"] += 1
-                    bucket["cavity_free"] += int(decay == 0)
+                    bucket["cavity_free"] += int(decay + missing == 0)
                 if all(v is not None and v >= 0 and v.is_integer() for v in values) and sum(values) <= limit:
                     bucket["dental_den"] += 1
                     bucket["dental_sum"] += sum(values)
