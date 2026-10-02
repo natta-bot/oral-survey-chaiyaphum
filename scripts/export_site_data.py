@@ -42,6 +42,10 @@ def export():
                 keys = (("ฟันน้ำนมผุ d (ซี่)", "ฟันน้ำนมถอน m (ซี่)", "ฟันน้ำนมอุด f (ซี่)") if age == "3" else ("ฟันแท้ผุ D (ซี่)", "ฟันแท้ถอน M (ซี่)", "ฟันแท้อุด F (ซี่)"))
                 values = [number(row.get(key)) for key in keys]
                 limit = 20 if age == "3" else 32
+                decay = values[0]
+                if decay is not None and decay >= 0 and decay.is_integer() and decay <= limit:
+                    bucket["cavity_den"] += 1
+                    bucket["cavity_free"] += int(decay == 0)
                 if all(v is not None and v >= 0 and v.is_integer() for v in values) and sum(values) <= limit:
                     bucket["dental_den"] += 1
                     bucket["dental_sum"] += sum(values)
@@ -49,6 +53,7 @@ def export():
             if age == "3":
                 add_binary(bucket, "white", row.get("พบรอยขาว White spot"))
             elif age == "12":
+                add_binary(bucket, "fluor", row.get("ฟันตกกระ"))
                 add_binary(bucket, "gum", row.get("เหงือกอักเสบ"))
                 values = [number(row.get(k)) for k in ("แปรงฟันตอนเช้า", "แปรงฟันก่อนนอน", "แปรงฟัน 2 นาที/ครั้ง", "ไม่กินอาหารหลังแปรงฟัน 2 ชั่วโมง")]
                 if all(v in (0, 1) for v in values):
