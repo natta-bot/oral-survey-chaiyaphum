@@ -33,7 +33,7 @@ function ageView(age){
   if(age==="3"){
     cards=[
       kpi("Caries Free (ปราศจากฟันผุ)",val(cariesFree,1,"%"),`dmft = 0 • ตัวหาร n=${fmt(s.dental_den)}`),
-      kpi("Cavity Free (ไม่มีรูผุ)",val(cavityFree,1,"%"),`d = 0 • ตัวหาร n=${fmt(s.cavity_den)}`),
+      kpi("Cavity Free (ไม่มีรูผุ)",val(cavityFree,1,"%"),`d + m = 0 • ตัวหาร n=${fmt(s.cavity_den)}`),
       kpi("White Spot",val(pct(s.white_num,s.white_den),1,"%"),`มีรอยสีขาวขุ่น • ตัวหาร n=${fmt(s.white_den)}`),
       kpi("dmft เฉลี่ย",val(s.dental_den?s.dental_sum/s.dental_den:null,1," ซี่"),`ตัวหาร n=${fmt(s.dental_den)}`),
       kpi("จำนวนเด็กที่ตรวจ",fmt(s.n),`${coverageRows(rows).length} ศูนย์/หน่วยสำรวจ`)
@@ -42,7 +42,7 @@ function ageView(age){
   }else if(age==="12"){
     cards=[
       kpi("Caries Free (ปราศจากฟันผุ)",val(cariesFree,1,"%"),`DMFT = 0 • ตัวหาร n=${fmt(s.dental_den)}`),
-      kpi("Cavity Free (ไม่มีรูผุ)",val(cavityFree,1,"%"),`D = 0 • ตัวหาร n=${fmt(s.cavity_den)}`),
+      kpi("Cavity Free (ไม่มีรูผุ)",val(cavityFree,1,"%"),`D + M = 0 • ตัวหาร n=${fmt(s.cavity_den)}`),
       kpi("DMFT เฉลี่ย",val(s.dental_den?s.dental_sum/s.dental_den:null,1," ซี่"),`ตัวหาร n=${fmt(s.dental_den)}`),
       kpi("ฟันตกกระ",val(pct(s.fluor_num,s.fluor_den),1,"%"),`ตัวหาร n=${fmt(s.fluor_den)}`),
       kpi("เหงือกอักเสบ",val(pct(s.gum_num,s.gum_den),1,"%"),`ตัวหาร n=${fmt(s.gum_den)}`),
