@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#c9b4df">
+  <title>Oral Survey | สำรวจสุขภาพช่องปาก</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">Oral Survey</div>
+      <div class="brand-sub">ระบบสำรวจสุขภาพช่องปาก</div>
+      <div class="nav-label">เมนูหลัก</div>
+      <nav id="nav">
+        <button class="nav-item active" data-view="overview"><span>◉</span> ภาพรวมระดับพื้นที่</button>
+        <button class="nav-item" data-view="policy"><span>◆</span> สรุปผลเชิงนโยบาย</button>
+        <button class="nav-item" data-view="coverage"><span>▦</span> การมีข้อมูลแต่ละอำเภอ</button>
+        <button class="nav-item" data-view="age3"><span>●</span> เด็กปฐมวัย 3 ปี</button>
+        <button class="nav-item" data-view="age12"><span>●</span> เด็ก 12 ปี</button>
+        <button class="nav-item" data-view="age60"><span>●</span> ผู้สูงอายุ 60–74 ปี</button>
+        <button class="nav-item" data-view="data"><span>▤</span> ศูนย์จัดการข้อมูลและส่งออก</button>
+      </nav>
+      <div class="sidebar-foot">
+        <div>● ข้อมูลสรุปจากฐานข้อมูลล่าสุด</div>
+        <small id="updatedAt">กำลังอ่านข้อมูล…</small>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">ORAL HEALTH / SURVEY DASHBOARD</div>
+          <h1 id="pageTitle">ภาพรวมระดับพื้นที่</h1>
+        </div>
+        <div class="header-actions">
+          <span class="data-badge">● ข้อมูลแบบไม่ระบุตัวบุคคล</span>
+          <button class="primary" id="printBtn">พิมพ์ / บันทึก PDF</button>
+        </div>
+      </header>
+
+      <section class="filters" aria-label="ตัวกรองข้อมูล">
+        <label>กลุ่มอายุ<select id="ageFilter"><option value="all">ทั้งหมด</option><option value="3">3 ปี</option><option value="12">12 ปี</option><option value="60-74">60–74 ปี</option></select></label>
+        <label>ปีงบประมาณ/พ.ศ.<select id="yearFilter"></select></label>
+        <label>อำเภอ<select id="districtFilter"></select></label>
+        <label>ตำบล<select id="tambonFilter"></select></label>
+        <label class="wide">หน่วยสำรวจ<select id="unitFilter"></select></label>
+      </section>
+
+      <div id="content" aria-live="polite"></div>
+      <footer>รายงานนี้ใช้ข้อมูลสรุปแบบไม่ระบุตัวบุคคล • ค่าว่างไม่นับเป็นศูนย์ในการคำนวณตัวชี้วัด</footer>
+    </main>
+  </div>
+  <div class="zoom-control"><label for="zoom">ขนาดหน้าจอ</label><select id="zoom"></select></div>
+  <script src="app.js"></script>
+</body>
+</html>
