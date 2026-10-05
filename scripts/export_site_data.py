@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import sys
+import argparse
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -20,8 +21,8 @@ def add_binary(bucket, name, value, allowed=(0, 1), predicate=lambda v: v == 1):
         bucket[name + "_num"] += int(predicate(value))
 
 
-def export():
-    data = Database(APP_DIR / "data").load()
+def export(db_folder=None, target=None):
+    data = Database(Path(db_folder) if db_folder else APP_DIR / "data").load()
     buckets = defaultdict(lambda: defaultdict(float))
 
     for age in AGES:
@@ -73,11 +74,15 @@ def export():
         age, district, tambon, unit, year = key
         output.append({"age": age, "district": district, "tambon": tambon, "unit": unit, "year": year, **{k: int(v) if float(v).is_integer() else v for k, v in metrics.items()}})
 
-    target = Path(__file__).resolve().parents[1] / "dist" / "data.json"
+    target = Path(target) if target else Path(__file__).resolve().parents[1] / "dist" / "data.json"
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps({"generated_at": datetime.now().isoformat(timespec="seconds"), "buckets": output}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(json.dumps({"buckets": len(output), "records": sum(row["n"] for row in output), "target": str(target)}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
-    export()
+    parser = argparse.ArgumentParser(description="Export anonymized aggregate data for the public dashboard")
+    parser.add_argument("--db-folder", help="Oral Survey database folder; defaults to oral_survey_app/data")
+    parser.add_argument("--target", help="Output data.json path; defaults to the Site dist folder")
+    args = parser.parse_args()
+    export(args.db_folder, args.target)
