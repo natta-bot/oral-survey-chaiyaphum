@@ -7,6 +7,7 @@
 ## การเผยแพร่
 
 - เว็บไซต์หลัก: https://oral-survey-chaiyaphum.dentssjcph.chatgpt.site
+- GitHub Pages: https://natta-bot.github.io/oral-survey-chaiyaphum/
 - GitHub Pages เผยแพร่เนื้อหาในโฟลเดอร์ `dist` ผ่าน branch `gh-pages`
 - ปุ่ม **อัปเดตเว็บไซต์** ในแอปสร้าง `dist/data.json` รุ่นใหม่จากฐานข้อมูลที่เปิดอยู่ แล้วเผยแพร่เว็บไซต์หลักและ GitHub Pages เมื่อกำหนด remote ชื่อ `github` แล้ว
 
