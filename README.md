@@ -1,0 +1,17 @@
+# Oral Survey Chaiyaphum
+
+แดชบอร์ดสรุปผลการสำรวจสุขภาพช่องปาก จังหวัดชัยภูมิ สำหรับเด็กปฐมวัย 3 ปี เด็ก 12 ปี และผู้สูงอายุ 60–74 ปี
+
+เว็บไซต์แสดงเฉพาะข้อมูลสรุปแบบไม่ระบุตัวบุคคล ไฟล์ฐานข้อมูลและข้อมูลดิบรายบุคคลไม่ถูกจัดเก็บใน repository นี้
+
+## การเผยแพร่
+
+- เว็บไซต์หลัก: https://oral-survey-chaiyaphum.dentssjcph.chatgpt.site
+- GitHub Pages เผยแพร่จากโฟลเดอร์ `dist` โดย GitHub Actions เมื่อมีการ push เข้า branch `main`
+- ปุ่ม **อัปเดตเว็บไซต์** ในแอปสร้าง `dist/data.json` รุ่นใหม่จากฐานข้อมูลที่เปิดอยู่ แล้วเผยแพร่เว็บไซต์หลักและ GitHub Pages เมื่อกำหนด remote ชื่อ `github` แล้ว
+
+## โครงสร้าง
+
+- `dist/` — ไฟล์เว็บไซต์แบบ static ที่พร้อมเผยแพร่
+- `scripts/export_site_data.py` — สร้างข้อมูลสรุปแบบไม่ระบุตัวบุคคลสำหรับเว็บไซต์
+- `.github/workflows/pages.yml` — workflow สำหรับ GitHub Pages
