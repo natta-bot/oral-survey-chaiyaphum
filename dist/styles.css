@@ -40,3 +40,5 @@ body{background:radial-gradient(ellipse at 85% 0,#f5edff,transparent 50%),#FAF7F
 
 /* Quiet dashed grid at 0–100 percent, shared pastel chart treatment. */
 .plot{background:repeating-linear-gradient(to right,#fff 0,#fff 5px,transparent 5px,transparent 10px),repeating-linear-gradient(to top,transparent 0,transparent calc(25% - 1px),#eeeaf3 calc(25% - 1px),#eeeaf3 25%)}
+
+.kpi-icon-shell{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:16px;background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.9);box-shadow:0 4px 12px #0000000f,inset 0 2px 4px #ffffffcc;margin-bottom:.8rem}.kpi-icon-shell .clay-icon{width:36px;height:36px;margin:0;filter:none;image-rendering:-webkit-optimize-contrast}.kpi.tone-caries{background:#FEECEB}.kpi.tone-white-spot,.kpi.tone-fluorosis{background:#FEF7E6}.kpi.tone-students,.kpi.tone-dmft,.kpi.tone-count,.kpi.tone-valid-records{background:#F2ECFF}.kpi.tone-functional,.kpi.tone-posterior,.kpi.tone-district{background:#E8F8EE}.kpi.tone-gum,.kpi.tone-denture{background:#FEECEB}.kpi.tone-brushing,.kpi.tone-location{background:#FFF0E6}
