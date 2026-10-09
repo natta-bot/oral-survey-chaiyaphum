@@ -1,0 +1,16 @@
+{
+  "background": "#FAF7FD",
+  "sidebar": "#ECE5F8",
+  "purple": "#9B7EED",
+  "peach": "#F68B88",
+  "mint": "#5ECBA1",
+  "ink": "#51445E",
+  "radius": 28,
+  "cards": [
+    "#F2ECFF",
+    "#FEECEB",
+    "#E8F8EE",
+    "#FEF7E6",
+    "#FFF0E6"
+  ]
+}

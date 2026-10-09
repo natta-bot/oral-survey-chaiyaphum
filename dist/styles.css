@@ -15,3 +15,28 @@ main{min-width:0;padding:2rem 2.4rem 4rem}.topbar{display:flex;align-items:cente
 .modal-backdrop{position:fixed;inset:0;z-index:50;background:#42334d8f;padding:3vh 3vw;display:grid;place-items:center}.modal{width:min(76rem,100%);max-height:94vh;overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:1.4rem;box-shadow:0 24px 70px #392b4554;padding:1.25rem;display:flex;flex-direction:column}.modal-head,.modal-tools{display:flex;align-items:center;justify-content:space-between;gap:1rem}.modal-head h2{margin:0}.modal-head p{margin:.3rem 0 0;color:var(--muted)}.modal-close{border:0;background:#efe6f7;color:var(--ink);border-radius:.8rem;padding:.7rem .9rem;font:inherit;cursor:pointer}.modal-tools{margin:1rem 0}.modal-tools input{flex:1;min-width:0;border:1px solid var(--line);border-radius:.8rem;padding:.8rem 1rem;font:inherit}.detail-summary{background:#fff1c9;border-radius:.8rem;padding:.75rem 1rem;font-weight:700}.detail-table{overflow:auto}.detail-table table{min-width:52rem}.detail-table tr.highlight td{background:#fef3c7}
 .bar{border:0;padding:0;position:relative;overflow:visible}.bar-label{position:absolute;bottom:calc(100% + .18rem);left:50%;transform:translateX(-50%);font-size:.62rem;font-weight:800;color:#51445e;white-space:nowrap}.slice-label{position:absolute;z-index:2;transform:translate(-50%,-50%);font-size:.72rem;font-weight:800;color:white;text-shadow:0 1px 3px #3f304f;pointer-events:none}
 @media(max-width:1100px){.kpis{grid-template-columns:repeat(auto-fit,minmax(12rem,1fr))}}@media(max-width:760px){.kpis{grid-template-columns:1fr}}
+
+/* Shared Oral Survey Clay theme: assets/clay/theme.json */
+:root{background:#FAF7FD;--purple:#9B7EED;--peach:#F68B88;--green:#5ECBA1;--paper:#FFFFFF;--line:#eee7f5}
+body{background:radial-gradient(ellipse at 85% 0,#f5edff,transparent 50%),#FAF7FD}
+.sidebar{background:linear-gradient(145deg,#f0eafa,#ECE5F8);border:1px solid #fff;border-radius:2rem;margin:1rem;height:calc(100vh - 2rem);padding:1.5rem 1rem;box-shadow:inset 3px 3px 8px #ffffffb3,0 14px 28px -4px #baa5e42e}
+.brand-mascot{width:6rem;height:6rem;align-self:flex-start;filter:drop-shadow(0 8px 6px #bfa9dd40)}
+.brand-sub small{display:block;margin-top:.5rem;color:#837091}
+.nav-item{display:flex;align-items:center;gap:.5rem;border-radius:1.4rem;padding:.7rem .8rem;margin:.2rem 0}
+.nav-item img{width:2.4rem;height:2.4rem;flex-shrink:0}
+.nav-item.active{background:linear-gradient(135deg,#fff,#faf7ff);color:#694898;box-shadow:inset 2px 2px 4px white,0 8px 14px #b7a4d637;border:1px solid #fff}
+.smile-note{display:flex;align-items:center;gap:.5rem;background:#ffffffa6;padding:.75rem;border:1px solid white;border-radius:1.5rem;color:#725886;font-weight:700;margin-bottom:1rem}.smile-note img{width:4rem;height:4rem}
+.card,.filters,.modal{border-radius:1.75rem;border:1px solid #ffffffcc;box-shadow:inset 2px 2px 5px #ffffffb3,0 14px 28px -4px #baa5e42e,0 8px 12px -6px #0000000a}
+.kpi{position:relative;padding:1.3rem;min-height:15rem}.clay-icon{width:4.5rem;height:4.5rem;display:block;margin-bottom:.5rem;filter:drop-shadow(0 5px 4px #bca9dc38)}
+.kpi.tone-clipboard{background:#F2ECFF}.kpi.tone-tooth{background:#FEECEB}.kpi.tone-shield{background:#E8F8EE}.kpi.tone-star{background:#FEF7E6}.kpi.tone-heart{background:#FFF0E6}
+.kpi-value{font-size:2.7rem;letter-spacing:-.05rem;color:#51445e}.kpi-label{min-height:2rem}.kpi-note{line-height:1.5}
+.primary,.secondary,.filter-reset{border-radius:1.1rem;box-shadow:inset 2px 2px 4px #ffffff55,0 5px 10px #baa5e42b}.primary{background:linear-gradient(145deg,#bda2f3,#9b7eed);border-color:#cdbcf3}.primary:hover{background:#9170dd}
+.filters input,.filters select{border-radius:1rem;background:#fff;box-shadow:inset 2px 2px 5px #c9bbdf1a}
+.bar,.fill,.track{border-radius:999px}.bar{border:0;box-shadow:inset 2px 0 3px #ffffff40}.plot{background:repeating-linear-gradient(to top,transparent 0,transparent calc(25% - 1px),#eeeaf3 calc(25% - 1px),#eeeaf3 25%)}
+.table-wrap{border-radius:1.25rem;border:1px solid #f0e9f5}th{background:#f2ecfa;color:#72558c}td{background:#ffffff}tbody tr:nth-child(even) td{background:#fcfaff}.status-badge{box-shadow:inset 0 1px 2px #ffffffc0}
+.donut{filter:drop-shadow(0 7px 8px #b9a5df26)}
+@media(max-width:760px){.sidebar{height:auto;margin:.7rem;border-radius:1.5rem}.brand-mascot{width:4rem;height:4rem}.nav-item img{width:2rem;height:2rem}.smile-note{display:none}.kpi{min-height:0}.clay-icon{width:4rem;height:4rem}}
+@media print{.clay-icon{width:2.5rem;height:2.5rem}.card{box-shadow:none}}
+
+/* Quiet dashed grid at 0–100 percent, shared pastel chart treatment. */
+.plot{background:repeating-linear-gradient(to right,#fff 0,#fff 5px,transparent 5px,transparent 10px),repeating-linear-gradient(to top,transparent 0,transparent calc(25% - 1px),#eeeaf3 calc(25% - 1px),#eeeaf3 25%)}
