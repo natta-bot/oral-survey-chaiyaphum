@@ -5,30 +5,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#c9b4df">
   <title>Oral Survey | สำรวจสุขภาพช่องปาก</title>
-  <link rel="stylesheet" href="styles.css?v=icons16">
+  <link rel="stylesheet" href="styles.css?v=profile17">
 </head>
 <body>
   <div class="app-shell">
     <aside class="sidebar">
-      <img class="brand-mascot" src="assets/clay/tooth.svg" alt="มาสคอตฟันยิ้ม"><div class="brand">Oral Survey</div>
-      <div class="brand-sub">ระบบสำรวจสุขภาพช่องปาก<br><small>สวัสดีค่ะ มาดูแลรอยยิ้มกัน</small></div>
+      <div class="team-profile"><img class="team-avatar" src="assets/clay/team-avatar.svg" alt="ทีมทันตบุคลากรยิ้มโบกมือ"><strong>Oral Health Team 💜</strong><span>Chaiyaphum Dental Care ✨</span></div>
+      <div class="brand">Oral Survey</div>
+      <div class="brand-sub">ระบบสำรวจสุขภาพช่องปาก</div>
       <div class="nav-label">เมนูหลัก</div>
       <nav id="nav">
         <button class="nav-item active" data-view="overview"><img src="assets/clay/home.svg" alt=""> ภาพรวมระดับพื้นที่</button>
         <button class="nav-item" data-view="policy"><img src="assets/clay/star.svg" alt=""> สรุปผลเชิงนโยบาย</button>
         <button class="nav-item" data-view="coverage"><img src="assets/clay/clipboard.svg" alt=""> การมีข้อมูลแต่ละอำเภอ</button>
         <button class="nav-item" data-view="age3"><img src="assets/clay/brush.svg" alt=""> เด็กปฐมวัย 3 ปี</button>
-        <button class="nav-item" data-view="age12"><img src="assets/clay/brush.svg" alt=""> เด็ก 12 ปี</button>
-        <button class="nav-item" data-view="age60"><img src="assets/clay/brush.svg" alt=""> ผู้สูงอายุ 60–74 ปี</button>
+        <button class="nav-item" data-view="age12"><img src="assets/clay/students.svg" alt=""> เด็ก 12 ปี</button>
+        <button class="nav-item" data-view="age60"><img src="assets/clay/heart.svg" alt=""> ผู้สูงอายุ 60–74 ปี</button>
         <button class="nav-item" data-view="data"><img src="assets/clay/folder.svg" alt=""> ศูนย์จัดการข้อมูลและส่งออก</button>
       </nav>
-      <div class="sidebar-foot"><div class="smile-note"><img src="assets/clay/plant.svg" alt="">ยิ้มสดใส ฟันแข็งแรง<br>ทุกช่วงวัย</div>
+      <div class="sidebar-foot"><div class="smile-note"><img src="assets/clay/plant.svg" alt="">ยิ้มสดใส สุขภาพฟันแข็งแรง 🌱✨</div>
         <div>● ข้อมูลสรุปจากฐานข้อมูลล่าสุด</div>
         <small id="updatedAt">กำลังอ่านข้อมูล…</small>
       </div>
     </aside>
 
     <main>
+      <div class="welcome-bar"><div><h2>สวัสดีทีมทันตสาธารณสุข! ☁️</h2><p>ร่วมสร้างรอยยิ้มสดใสให้ประชาชนทุกช่วงวัย ✨</p></div><div class="team-tools"><details class="notice"><summary aria-label="สถานะการแจ้งเตือน"><img src="assets/clay/bell.svg" alt=""></summary><div class="notice-panel"><strong>การแจ้งเตือน</strong><p>ไม่มีการแจ้งเตือนใหม่</p></div></details><img class="mini-avatar" src="assets/clay/team-avatar.svg" alt="Oral Health Team"></div></div>
       <header class="topbar">
         <div>
           <div class="eyebrow">ORAL HEALTH / SURVEY DASHBOARD</div>
@@ -45,7 +47,7 @@
         <label>อำเภอ<select id="districtFilter"></select></label>
         <label>หน่วยสำรวจ<select id="unitFilter"></select></label>
         <button class="filter-reset" id="resetFilters" type="button" title="ล้างตัวกรองทั้งหมด">↻ ล้างค่า</button>
-        <label class="wide">ค้นหาข้อมูล<input id="searchFilter" type="search" placeholder="ค้นหาอำเภอ / หน่วยสำรวจ…"></label>
+        <label class="wide">ค้นหาข้อมูล<input id="searchFilter" type="search" placeholder="⌕ ค้นหาอำเภอ / หน่วยสำรวจ…"></label>
       </section>
 
       <div id="content" aria-live="polite"></div>
@@ -53,6 +55,6 @@
     </main>
   </div>
   <div class="zoom-control"><label for="zoom">ขนาดหน้าจอ</label><select id="zoom"></select></div>
-  <script src="app.js?v=icons16"></script>
+  <script src="app.js?v=profile17"></script>
 </body>
 </html>
